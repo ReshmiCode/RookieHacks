@@ -1120,7 +1120,7 @@ PrefabInstance:
     - target: {fileID: 8601588727735631634, guid: 9f8b6d63853ea9e43ac4580236865d69,
         type: 3}
       propertyPath: m_Name
-      value: bunny
+      value: MainCharacter
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5993321900291514615, guid: 9f8b6d63853ea9e43ac4580236865d69, type: 3}
