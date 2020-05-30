@@ -4,15 +4,14 @@ using UnityEngine;
 
 public class TrashController : MonoBehaviour
 {
-    public float speed = 2.0f;
+    float speed;
     Rigidbody2D rigidbody2D;
-    Vector2 leftBottom;
 
     // Start is called before the first frame update
     void Start()
     {
+        speed = Random.Range(2, 5);
         rigidbody2D = GetComponent<Rigidbody2D>();
-        leftBottom = Camera.main.ViewportToWorldPoint(Vector3.zero);
     }
 
     void FixedUpdate()
@@ -24,7 +23,7 @@ public class TrashController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (rigidbody2D.position.x < leftBottom.x)
+        if (rigidbody2D.position.x < -10)
         {
             Destroy(gameObject);
         }
