@@ -684,7 +684,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42cd7f9d82516e647ba1da9d743f3dfd, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  trash: {fileID: 2263583020978714949, guid: 641eba47e572b4544804208d3d6929e7, type: 3}
+  movingObjs:
+  - {fileID: 2434566813949734365, guid: b418053222641464b8a1fc7d37a13d69, type: 3}
+  - {fileID: 2263583020978714949, guid: 641eba47e572b4544804208d3d6929e7, type: 3}
   spawnRate: 2
 --- !u!4 &740534816
 Transform:
