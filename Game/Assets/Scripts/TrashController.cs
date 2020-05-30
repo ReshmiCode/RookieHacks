@@ -22,7 +22,7 @@ public class TrashController : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        BunnyController player = other.GetComponent<BunnyController>();
+        CharacterController player = other.GetComponent<CharacterController>();
         if (player != null)
         {
             player.ChangeHealth(-1);

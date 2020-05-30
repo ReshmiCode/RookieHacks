@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class BunnyController : MonoBehaviour
+public class CharacterController : MonoBehaviour
 {
     public float speed = 3.0f;
 
@@ -25,7 +25,6 @@ public class BunnyController : MonoBehaviour
     private Vector2 spriteSize;
     private Vector2 spriteHalfSize;
 
-    // Start is called before the first frame update
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
@@ -39,7 +38,6 @@ public class BunnyController : MonoBehaviour
         spriteHalfSize = spriteRenderer.sprite.bounds.extents;
     }
 
-    // Update is called once per frame
     void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
@@ -64,17 +62,14 @@ public class BunnyController : MonoBehaviour
 
     private void LateUpdate()
     {
-        // get the sprite's edge positions
         float spriteLeft   = transform.position.x - spriteHalfSize.x;
         float spriteRight  = transform.position.x + spriteHalfSize.x;
         float spriteBottom = transform.position.y - spriteHalfSize.y;
         float spriteTop    = transform.position.y + spriteHalfSize.y;
  
-        // initialize the new position to the current position
         Vector3 clampedPosition = transform.position;
  
-        // if any of the edges surpass the camera's bounds,
-        // set the position TO the camera bounds (accounting for sprite's size)
+
         if(spriteLeft < leftBottom.x)
         {
             clampedPosition.x = leftBottom.x + spriteHalfSize.x;
