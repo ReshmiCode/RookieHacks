@@ -16,6 +16,7 @@ public class CharacterController : MonoBehaviour
     float invincibleTimer;
 
     Rigidbody2D rigidbody2d;
+    SpriteRenderer sprite;
     float horizontal;
     float vertical;
 
@@ -28,6 +29,7 @@ public class CharacterController : MonoBehaviour
     void Start()
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
+        sprite = GetComponent<SpriteRenderer>();
         currentHealth = maxHealth;
 
         leftBottom = Camera.main.ViewportToWorldPoint(Vector3.zero);
@@ -53,6 +55,11 @@ public class CharacterController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (startBlinking == true)
+        {
+            SpriteBlinkingEffect();
+        }
+
         Vector2 position = rigidbody2d.position;
         position.x = position.x + speed * horizontal * Time.deltaTime;
         position.y = position.y + speed * vertical * Time.deltaTime;
@@ -100,10 +107,43 @@ public class CharacterController : MonoBehaviour
 
             isInvincible = true;
             invincibleTimer = timeInvincible;
+            startBlinking = true;
         }
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+    }
+
+    float spriteBlinkingTimer = 0.0f;
+    float spriteBlinkingMiniDuration = 0.1f;
+    float spriteBlinkingTotalTimer = 0.0f;
+    float spriteBlinkingTotalDuration = 2.0f;
+    bool startBlinking = false;
+
+    private void SpriteBlinkingEffect()
+    {
+        spriteBlinkingTotalTimer += Time.deltaTime;
+        if (spriteBlinkingTotalTimer >= spriteBlinkingTotalDuration)
+        {
+            startBlinking = false;
+            spriteBlinkingTotalTimer = 0.0f;
+            sprite.enabled = true;
+            return;
+        }
+
+        spriteBlinkingTimer += Time.deltaTime;
+        if (spriteBlinkingTimer >= spriteBlinkingMiniDuration)
+        {
+            spriteBlinkingTimer = 0.0f;
+            if (sprite.enabled == true)
+            {
+                sprite.enabled = false;
+            }
+            else
+            {
+                sprite.enabled = true;
+            }
+        }
     }
 }
