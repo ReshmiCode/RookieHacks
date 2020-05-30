@@ -468,7 +468,7 @@ GameObject:
   - component: {fileID: 746434640}
   - component: {fileID: 746434639}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: TextObjects
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1055,12 +1055,12 @@ PrefabInstance:
     - target: {fileID: 7643128201160500564, guid: 9f8b6d63853ea9e43ac4580236865d69,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -3.46
+      value: -3.5
       objectReference: {fileID: 0}
     - target: {fileID: 7643128201160500564, guid: 9f8b6d63853ea9e43ac4580236865d69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.02
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7643128201160500564, guid: 9f8b6d63853ea9e43ac4580236865d69,
         type: 3}
