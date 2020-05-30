@@ -4,14 +4,13 @@ using UnityEngine;
 
 public class RecycleController : MonoBehaviour
 {
-    public float speed = 2.0f;
+    public float speed;
     Rigidbody2D rigidbody2D;
-    Vector2 leftBottom;
 
     void Start()
     {
         rigidbody2D = GetComponent<Rigidbody2D>();
-        leftBottom = Camera.main.ViewportToWorldPoint(Vector3.zero);
+        speed = Random.Range(2, 5);
     }
 
     void FixedUpdate()
@@ -23,7 +22,7 @@ public class RecycleController : MonoBehaviour
 
     private void LateUpdate()
     {
-        if (rigidbody2D.position.x < leftBottom.x)
+        if (rigidbody2D.position.x < -10)
         {
             Destroy(gameObject);
         }

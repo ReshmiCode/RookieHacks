@@ -687,7 +687,9 @@ MonoBehaviour:
   movingObjs:
   - {fileID: 2434566813949734365, guid: b418053222641464b8a1fc7d37a13d69, type: 3}
   - {fileID: 2263583020978714949, guid: 641eba47e572b4544804208d3d6929e7, type: 3}
-  spawnRate: 4
+  - {fileID: 7561289104576668305, guid: a930dae28b0e9f74ba2f3b8e980a1c86, type: 3}
+  - {fileID: 3953872152473119731, guid: 477f8c99b50a0104c8361a8c24606be5, type: 3}
+  spawnRate: 2
 --- !u!4 &740534816
 Transform:
   m_ObjectHideFlags: 0
@@ -1312,12 +1314,12 @@ PrefabInstance:
     - target: {fileID: 7643128201160500564, guid: 9f8b6d63853ea9e43ac4580236865d69,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.119
+      value: -5.33
       objectReference: {fileID: 0}
     - target: {fileID: 7643128201160500564, guid: 9f8b6d63853ea9e43ac4580236865d69,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.6967211
+      value: -0.25
       objectReference: {fileID: 0}
     - target: {fileID: 7643128201160500564, guid: 9f8b6d63853ea9e43ac4580236865d69,
         type: 3}

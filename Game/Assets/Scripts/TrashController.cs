@@ -4,12 +4,13 @@ using UnityEngine;
 
 public class TrashController : MonoBehaviour
 {
-    public float speed = 2.0f;
+    float speed;
     Rigidbody2D rigidbody2D;
 
     // Start is called before the first frame update
     void Start()
     {
+        speed = Random.Range(2, 5);
         rigidbody2D = GetComponent<Rigidbody2D>();
     }
 

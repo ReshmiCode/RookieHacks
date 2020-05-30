@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     float randY;
     int randItem;
     Vector2 whereToSpawn;
-    public float spawnRate = 2f;
+    public float spawnRate = 0.5f;
     float nextSpawn = 0.0f;
 
     void Update()
@@ -16,8 +16,7 @@ public class Spawner : MonoBehaviour
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
-            randY = Random.Range(-2f, 2f);
-            whereToSpawn = new Vector2(transform.position.x, randY);
+            whereToSpawn = new Vector2(transform.position.x, Random.Range(-3.75f, 3.75f));
             randItem = Random.Range(0, movingObjs.Length);
             Instantiate(movingObjs[randItem], whereToSpawn, Quaternion.identity);
         }
