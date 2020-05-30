@@ -11,6 +11,7 @@ public class CharacterController : MonoBehaviour
 
     public int health { get { return currentHealth; } }
     int currentHealth;
+    int score;
 
     bool isInvincible;
     float invincibleTimer;
@@ -113,6 +114,11 @@ public class CharacterController : MonoBehaviour
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+    }
+
+    public void ChangeScore(int amount)
+    {
+        score += amount;
     }
 
     float spriteBlinkingTimer = 0.0f;
