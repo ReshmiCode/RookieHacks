@@ -30,11 +30,11 @@ public class CharacterController : MonoBehaviour
         rigidbody2d = GetComponent<Rigidbody2D>();
         currentHealth = maxHealth;
 
-      	leftBottom = Camera.main.ViewportToWorldPoint(Vector3.zero);
-        rightTop   = Camera.main.ViewportToWorldPoint(Vector3.one);
- 
+        leftBottom = Camera.main.ViewportToWorldPoint(Vector3.zero);
+        rightTop = Camera.main.ViewportToWorldPoint(Vector3.one);
+
         spriteRenderer = GetComponent<SpriteRenderer>();
-        spriteSize     = spriteRenderer.sprite.bounds.size;
+        spriteSize = spriteRenderer.sprite.bounds.size;
         spriteHalfSize = spriteRenderer.sprite.bounds.extents;
     }
 
@@ -62,32 +62,32 @@ public class CharacterController : MonoBehaviour
 
     private void LateUpdate()
     {
-        float spriteLeft   = transform.position.x - spriteHalfSize.x;
-        float spriteRight  = transform.position.x + spriteHalfSize.x;
+        float spriteLeft = transform.position.x - spriteHalfSize.x;
+        float spriteRight = transform.position.x + spriteHalfSize.x;
         float spriteBottom = transform.position.y - spriteHalfSize.y;
-        float spriteTop    = transform.position.y + spriteHalfSize.y;
- 
-        Vector3 clampedPosition = transform.position;
- 
+        float spriteTop = transform.position.y + spriteHalfSize.y;
 
-        if(spriteLeft < leftBottom.x)
+        Vector3 clampedPosition = transform.position;
+
+
+        if (spriteLeft < leftBottom.x)
         {
             clampedPosition.x = leftBottom.x + spriteHalfSize.x;
         }
-        else if(spriteRight > rightTop.x)
+        else if (spriteRight > rightTop.x)
         {
             clampedPosition.x = rightTop.x - spriteHalfSize.x;
         }
- 
-        if(spriteTop < leftBottom.y)
+
+        if (spriteTop < leftBottom.y)
         {
             clampedPosition.y = leftBottom.y + spriteHalfSize.y;
         }
-        else if(spriteTop > rightTop.y)
+        else if (spriteTop > rightTop.y)
         {
             clampedPosition.y = rightTop.y - spriteHalfSize.y;
         }
- 
+
         transform.position = clampedPosition;
     }
 
@@ -104,5 +104,6 @@ public class CharacterController : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         Debug.Log(currentHealth + "/" + maxHealth);
+        UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
     }
 }
