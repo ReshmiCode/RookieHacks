@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1942653799540967989}
   - component: {fileID: 8034992115413566944}
   - component: {fileID: 333262293}
+  - component: {fileID: 4187785094616226649}
   m_Layer: 0
   m_Name: bunny
   m_TagString: Untagged
@@ -119,3 +120,22 @@ MonoBehaviour:
   speed: 3
   maxHealth: 5
   timeInvincible: 2
+--- !u!95 &4187785094616226649
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8601588727735631634}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 725626405a6ae2f438fca1d2c1457161, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
