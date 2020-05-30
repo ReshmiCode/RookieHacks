@@ -36,7 +36,7 @@ public class TrashController : MonoBehaviour
         if (player != null)
         {
             player.ChangeHealth(-1);
-            player.ChangeScore(-1);
+            player.ChangeScore(-5);
             Destroy(gameObject);
         }
     }
