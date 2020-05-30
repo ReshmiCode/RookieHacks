@@ -11,11 +11,6 @@ public class Spawner : MonoBehaviour
     public float spawnRate = 2f;
     float nextSpawn = 0.0f;
 
-    void Start()
-    {
-
-    }
-
     void Update()
     {
         if (Time.time > nextSpawn)
