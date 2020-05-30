@@ -20,7 +20,7 @@ public class Spawner : MonoBehaviour
         if (Time.time > nextSpawn)
         {
             nextSpawn = Time.time + spawnRate;
-            randY = Random.Range(-2f, 2f);
+            randY = Random.Range(-3.95f, 2.13f);
             whereToSpawn = new Vector2(transform.position.x, randY);
             Instantiate(trash, whereToSpawn, Quaternion.identity);
         }
