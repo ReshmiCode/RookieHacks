@@ -119,6 +119,7 @@ public class CharacterController : MonoBehaviour
     public void ChangeScore(int amount)
     {
         score += amount;
+        ScoreController.instance.SetValue(score);
     }
 
     float spriteBlinkingTimer = 0.0f;
