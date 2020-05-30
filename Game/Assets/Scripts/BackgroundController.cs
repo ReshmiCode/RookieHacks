@@ -3,19 +3,10 @@ using System.Collections;
 
 public class BackgroundController : MonoBehaviour
 {
-	public float scrollSpeed;
-	public float tileSizeZ;
-
-	private Vector3 startPosition;
-
-	void Start ()
-	{
-		startPosition = transform.position;
-	}
+	public float speed;
 
 	void Update ()
 	{
-		float newPosition = Mathf.Repeat(Time.time * scrollSpeed, tileSizeZ);
-		transform.position = startPosition + Vector3.forward * newPosition;
+		GetComponent<Renderer>().material.mainTextureOffset = new Vector2((Time.time*speed)%1,0f);
 	}
 }
