@@ -131,7 +131,6 @@ GameObject:
   m_Component:
   - component: {fileID: 77889445}
   - component: {fileID: 77889444}
-  - component: {fileID: 77889443}
   m_Layer: 0
   m_Name: BackgroundCamera
   m_TagString: Untagged
@@ -139,14 +138,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!81 &77889443
-AudioListener:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 77889442}
-  m_Enabled: 0
 --- !u!20 &77889444
 Camera:
   m_ObjectHideFlags: 0
@@ -1365,6 +1356,21 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643128201160500564, guid: 9f8b6d63853ea9e43ac4580236865d69,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643128201160500564, guid: 9f8b6d63853ea9e43ac4580236865d69,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7643128201160500564, guid: 9f8b6d63853ea9e43ac4580236865d69,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8601588727735631634, guid: 9f8b6d63853ea9e43ac4580236865d69,
         type: 3}
