@@ -18,6 +18,9 @@ public class CharacterController : MonoBehaviour
 
     Rigidbody2D rigidbody2d;
     SpriteRenderer sprite;
+    Animator animator;
+    enum Bin { blue, green, gray };
+    Bin binMode = 0;
     float horizontal;
     float vertical;
 
@@ -31,6 +34,7 @@ public class CharacterController : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         currentHealth = maxHealth;
 
         leftBottom = Camera.main.ViewportToWorldPoint(Vector3.zero);
@@ -45,6 +49,19 @@ public class CharacterController : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            animator.Play("BlueBin");
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            animator.Play("GrayBin");
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            animator.Play("GreenBin");
+        }
 
         if (isInvincible)
         {
