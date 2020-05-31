@@ -1,3 +1,27 @@
+# Recycle Bun
+
+## Created By
+
+- [Megan Tran](https://github.com/meganjtran)
+- [Reshmi Ranjith](https://github.com/ReshmiCode)
+- [Saloni Shivdasani](https://github.com/SaloniSS)
+- [Vincent Vu](https://github.com/vincent-vu280)
+
+## Links
+
+[Website](https://www.recyclebun-recycleorberecycled.space/)   
+[Demo Video](https://www.youtube.com/watch?v=kU_pBXSsnk4)  
+[Devpost Submission](https://devpost.com/software/recycle-bun)  
+[Alternate Website](https://recycle-bun.web.app/)  
+[Unity Connect Listing](https://connect.unity.com/mg/other/recycle-bun)  
+[Play Online](https://recycle-bun-game.web.app/)
+
+## Submission
+Submitted for RookieHacks - MLH Summer League 2020
+
+### Awards
+-  
+
 ## Inspiration
 When dealing with your used items, knowing what’s recyclable and what isn’t is often a challenge. Different materials might need to be sorted and recycled separately. Trash placed in recycling bins decreases the efficiency of recycling centers, damages equipment, and can contaminate actual recyclables. Recycle Bun is a fun game that encourages recycling and reminds players of proper recycling procedures.
 
