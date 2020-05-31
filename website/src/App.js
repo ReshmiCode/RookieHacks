@@ -41,6 +41,20 @@ function App() {
         ></iframe>
         <div className="button-area">
           <Button className="button" variant="contained">
+            <a href="https://storage.googleapis.com/recycle-bun-macos/RecycleBunMacOS.zip" target="_blank" rel="noopener noreferrer" download>
+              Download for MacOS
+            </a>
+          </Button>
+        </div>
+        <div className="button-area">
+          <Button className="button" variant="contained">
+            <a href="https://storage.googleapis.com/recycle-bun-macos/RecycleBunWindows.zip" target="_blank" rel="noopener noreferrer" download>
+              Download for Windows
+            </a>
+          </Button>
+        </div>
+        <div className="button-area">
+          <Button className="button" variant="contained">
             <a href="https://connect.unity.com/mg/other/recycle-bun" target="_blank" rel="noopener noreferrer">
               Try It On Connect.Unity
             </a>
