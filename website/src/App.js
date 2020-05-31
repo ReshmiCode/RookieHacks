@@ -32,7 +32,7 @@ function App() {
         </p>
         <div className="button-area">
           <Button className="button" variant="contained">
-            <a href="https://chrome.google.com/webstore/detail/money-money-money/ehdcenmhmjlkmlnmlglncndglmoglojd" target="_blank" rel="noopener noreferrer">
+            <a href="https://connect.unity.com/mg/other/recycle-bun" target="_blank" rel="noopener noreferrer">
               Try It
             </a>
           </Button>
