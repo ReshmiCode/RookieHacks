@@ -175,8 +175,8 @@ public class CharacterController : MonoBehaviour
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
         if (currentHealth <= 0)
         {
-            Debug.Log(score);
-            FinalScoreController.instance.SetValue(score);
+            //FinalScoreController.instance.SetValue(score);
+            PlayerPrefs.SetInt("Score", score);
             Application.LoadLevel(3);
         }
     }

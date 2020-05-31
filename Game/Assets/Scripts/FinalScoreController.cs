@@ -15,13 +15,14 @@ public class FinalScoreController : MonoBehaviour
 
     void Start()
     {
-        scoreText.text = "0";
-    }
-
-    public void SetValue(int score)
-    {
-        Debug.Log(score);
-        //scoreText.text = score.ToString();
+        if (PlayerPrefs.HasKey("Score"))
+        {
+            scoreText.text = PlayerPrefs.GetInt("Score").ToString();
+        }
+        else
+        {
+            scoreText.text = "0";
+        }
     }
 }
 
