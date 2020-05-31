@@ -823,6 +823,7 @@ MonoBehaviour:
   - {fileID: 2263583020978714949, guid: 641eba47e572b4544804208d3d6929e7, type: 3}
   - {fileID: 7561289104576668305, guid: a930dae28b0e9f74ba2f3b8e980a1c86, type: 3}
   - {fileID: 3953872152473119731, guid: 477f8c99b50a0104c8361a8c24606be5, type: 3}
+  - {fileID: 3138040646413206688, guid: 08f22d522433a0f41a82d1cfbeecb49b, type: 3}
   spawnRate: 2
 --- !u!4 &740534816
 Transform:
@@ -1540,6 +1541,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4187785094616226649, guid: 9f8b6d63853ea9e43ac4580236865d69,
+        type: 3}
+      propertyPath: m_Controller
+      value: 
+      objectReference: {fileID: 9100000, guid: 66ed30b145c674147bff20cce8cbd657, type: 2}
     - target: {fileID: 7643128201160500564, guid: 9f8b6d63853ea9e43ac4580236865d69,
         type: 3}
       propertyPath: m_LocalPosition.x
