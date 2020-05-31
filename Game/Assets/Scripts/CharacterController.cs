@@ -125,33 +125,36 @@ public class CharacterController : MonoBehaviour
         {
             if (binMode == Bin.blue)
             {
-                ChangeHealth(10);
+                ChangeScore(10);
             }
             else
             {
-                ChangeHealth(-5);
+                ChangeScore(-5);
+                ChangeHealth(-1);
             }
         }
         if (name.Equals("plastic(Clone)"))
         {
             if (binMode == Bin.green)
             {
-                ChangeHealth(10);
+                ChangeScore(10);
             }
             else
             {
-                ChangeHealth(-5);
+                ChangeScore(-5);
+                ChangeHealth(-1);
             }
         }
         if (name.Equals("glass(Clone)"))
         {
             if (binMode == Bin.gray)
             {
-                ChangeHealth(10);
+                ChangeScore(10);
             }
             else
             {
-                ChangeHealth(-5);
+                ChangeScore(-5);
+                ChangeHealth(-1);
             }
         }
     }
