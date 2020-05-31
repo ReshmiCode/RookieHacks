@@ -20,7 +20,7 @@ public class CharacterController : MonoBehaviour
     SpriteRenderer sprite;
     Animator animator;
     enum Bin { blue, green, gray };
-    Bin binMode = 0;
+    Bin binMode = Bin.blue;
     float horizontal;
     float vertical;
 
@@ -53,14 +53,17 @@ public class CharacterController : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.B))
         {
             animator.Play("BlueBin");
+            binMode = Bin.blue;
         }
         if (Input.GetKeyDown(KeyCode.N))
         {
             animator.Play("GrayBin");
+            binMode = Bin.gray;
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
             animator.Play("GreenBin");
+            binMode = Bin.green;
         }
 
         if (isInvincible)
@@ -114,6 +117,43 @@ public class CharacterController : MonoBehaviour
         }
 
         transform.position = clampedPosition;
+    }
+
+    public void ChangeScore(string name)
+    {
+        if (name.Equals("paper(Clone)"))
+        {
+            if (binMode == Bin.blue)
+            {
+                ChangeHealth(10);
+            }
+            else
+            {
+                ChangeHealth(-5);
+            }
+        }
+        if (name.Equals("plastic(Clone)"))
+        {
+            if (binMode == Bin.green)
+            {
+                ChangeHealth(10);
+            }
+            else
+            {
+                ChangeHealth(-5);
+            }
+        }
+        if (name.Equals("glass(Clone)"))
+        {
+            if (binMode == Bin.gray)
+            {
+                ChangeHealth(10);
+            }
+            else
+            {
+                ChangeHealth(-5);
+            }
+        }
     }
 
     public void ChangeHealth(int amount)
