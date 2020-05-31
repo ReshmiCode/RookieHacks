@@ -10,6 +10,7 @@ public class Spawner : MonoBehaviour
     Vector2 whereToSpawn;
     public float spawnRate = 1f;
     float nextSpawn = 0.0f;
+    int[] probability = {0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 0, 1, 3, 4};
 
     void Update()
     {
@@ -17,8 +18,8 @@ public class Spawner : MonoBehaviour
         {
             nextSpawn = Time.time + spawnRate;
             whereToSpawn = new Vector2(transform.position.x, Random.Range(-3.75f, 3.75f));
-            randItem = Random.Range(0, movingObjs.Length);
-            Instantiate(movingObjs[randItem], whereToSpawn, Quaternion.identity);
+            randItem = Random.Range(0, probability.Length);
+            Instantiate(movingObjs[probability[randItem]], whereToSpawn, Quaternion.identity);
         }
     }
 }
