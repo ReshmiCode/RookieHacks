@@ -113,6 +113,10 @@ public class CharacterController : MonoBehaviour
 
         currentHealth = Mathf.Clamp(currentHealth + amount, 0, maxHealth);
         UIHealthBar.instance.SetValue(currentHealth / (float)maxHealth);
+        if (currentHealth <= 0)
+        {
+            Application.LoadLevel(3);
+        }
     }
 
     public void ChangeScore(int amount)
