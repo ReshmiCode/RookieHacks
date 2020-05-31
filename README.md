@@ -5,8 +5,8 @@ When dealing with your used items, knowing what’s recyclable and what isn’t 
 Recycle Bun is a “bullet dodge” or “barrage” game, where the player controls a responsible bunny who is trying to properly recycle different items. Ingame, items approach the player character, some recyclable and some not. The player must avoid the trash and pick up the recyclable items. The player must also switch between the appropriate bins (paper, plastic, or glass) when picking up recyclables.
 
 ## How we built it
-- **Game: ** We built this game using Unity game engine and C# scripts.
-- **Website:** We built the website using React for the frontend and GCP for the DevOps. We used GCP Storage to store and download the standalone desktop game files, and GCP Firebase to host our website on Domain.com [here](https://recyclebun-recycleorberecycled.space/)
+- **Game:** We built this game using Unity game engine and C# scripts.
+- **Website:** We built the website using React for the frontend and GCP for the DevOps. We used GCP Storage to store and download the standalone desktop game files, and GCP Firebase to deploy our website which is hosted on Domain.com [here](https://recyclebun-recycleorberecycled.space/)
 
 ## Challenges we ran into
 This was our first time using Unity and our first time writing any code in C# so we spent a lot of time reading tutorials and looking at examples. We ran into some trouble with managing and switching between all of the different animation sequences. It was also a little difficult to figure out the navigation between our different screens and having matching music changes to go along with it. We struggled a little bit to integrate the WebGL app with our website.
