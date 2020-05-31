@@ -30,10 +30,19 @@ function App() {
           The player must avoid the trash and pick up the recyclable items. 
           The player must also switch between the appropriate bins (paper, plastic, or glass) when picking up recyclables.
         </p>
+        <iframe
+          width="1000"
+          height="700"
+          src="https://recycle-bun-game.web.app"
+          frameborder="0"
+          allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen
+          title="Demo Video"
+        ></iframe>
         <div className="button-area">
           <Button className="button" variant="contained">
             <a href="https://connect.unity.com/mg/other/recycle-bun" target="_blank" rel="noopener noreferrer">
-              Try It
+              Try It On Connect.Unity
             </a>
           </Button>
         </div>
