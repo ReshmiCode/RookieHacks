@@ -10,7 +10,7 @@
 ## Links
 
 [Website](https://www.recyclebun-recycleorberecycled.space/)   
-[Demo Video](https://www.youtube.com/watch?v=kU_pBXSsnk4)  
+[Demo Video](https://youtu.be/-E97DHI-2Z8)  
 [Devpost Submission](https://devpost.com/software/recycle-bun)  
 [Alternate Website](https://recycle-bun.web.app/)  
 [Unity Connect Listing](https://connect.unity.com/mg/other/recycle-bun)  
