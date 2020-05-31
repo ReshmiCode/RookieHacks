@@ -15,12 +15,12 @@ public class ScoreController : MonoBehaviour
 
     void Start()
     {
-        scoreText.text = "Score: 0";
+        scoreText.text = "0";
     }
 
     public void SetValue(int score)
     {
-        scoreText.text = "Score: " + score.ToString();
+        scoreText.text = score.ToString();
     }
 }
 

@@ -176,7 +176,7 @@ public class CharacterController : MonoBehaviour
         if (currentHealth <= 0)
         {
             Debug.Log(score);
-            //FinalScoreController.instance.SetValue(score);
+            FinalScoreController.instance.SetValue(score);
             Application.LoadLevel(3);
         }
     }

@@ -20,7 +20,8 @@ public class FinalScoreController : MonoBehaviour
 
     public void SetValue(int score)
     {
-        scoreText.text = score.ToString();
+        Debug.Log(score);
+        //scoreText.text = score.ToString();
     }
 }
 
