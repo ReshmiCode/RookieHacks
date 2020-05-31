@@ -18,6 +18,9 @@ public class CharacterController : MonoBehaviour
 
     Rigidbody2D rigidbody2d;
     SpriteRenderer sprite;
+    Animator animator;
+    enum Bin { blue, green, gray };
+    Bin binMode = Bin.blue;
     float horizontal;
     float vertical;
 
@@ -31,6 +34,7 @@ public class CharacterController : MonoBehaviour
     {
         rigidbody2d = GetComponent<Rigidbody2D>();
         sprite = GetComponent<SpriteRenderer>();
+        animator = GetComponent<Animator>();
         currentHealth = maxHealth;
 
         leftBottom = Camera.main.ViewportToWorldPoint(Vector3.zero);
@@ -45,6 +49,22 @@ public class CharacterController : MonoBehaviour
     {
         horizontal = Input.GetAxis("Horizontal");
         vertical = Input.GetAxis("Vertical");
+
+        if (Input.GetKeyDown(KeyCode.B))
+        {
+            animator.Play("BlueBin");
+            binMode = Bin.blue;
+        }
+        if (Input.GetKeyDown(KeyCode.N))
+        {
+            animator.Play("GrayBin");
+            binMode = Bin.gray;
+        }
+        if (Input.GetKeyDown(KeyCode.M))
+        {
+            animator.Play("GreenBin");
+            binMode = Bin.green;
+        }
 
         if (isInvincible)
         {
@@ -97,6 +117,46 @@ public class CharacterController : MonoBehaviour
         }
 
         transform.position = clampedPosition;
+    }
+
+    public void ChangeScore(string name)
+    {
+        if (name.Equals("paper(Clone)"))
+        {
+            if (binMode == Bin.blue)
+            {
+                ChangeScore(10);
+            }
+            else
+            {
+                ChangeScore(-5);
+                ChangeHealth(-1);
+            }
+        }
+        if (name.Equals("plastic(Clone)"))
+        {
+            if (binMode == Bin.green)
+            {
+                ChangeScore(10);
+            }
+            else
+            {
+                ChangeScore(-5);
+                ChangeHealth(-1);
+            }
+        }
+        if (name.Equals("glass(Clone)"))
+        {
+            if (binMode == Bin.gray)
+            {
+                ChangeScore(10);
+            }
+            else
+            {
+                ChangeScore(-5);
+                ChangeHealth(-1);
+            }
+        }
     }
 
     public void ChangeHealth(int amount)

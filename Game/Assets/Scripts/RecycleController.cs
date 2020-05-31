@@ -33,7 +33,7 @@ public class RecycleController : MonoBehaviour
         CharacterController player = other.GetComponent<CharacterController>();
         if (player != null)
         {
-            player.ChangeScore(10);
+            player.ChangeScore(gameObject.name);
             Destroy(gameObject);
         }
     }

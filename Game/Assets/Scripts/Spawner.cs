@@ -8,7 +8,7 @@ public class Spawner : MonoBehaviour
     float randY;
     int randItem;
     Vector2 whereToSpawn;
-    public float spawnRate = 0.5f;
+    public float spawnRate = 1f;
     float nextSpawn = 0.0f;
 
     void Update()
